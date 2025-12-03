@@ -5,9 +5,6 @@ COPY package.json .
 COPY *.js .
 RUN npm install
 ENV MONGO="true" \
-    REDIS_URL="redis://redis:6379/redis" \
-    MONGO_URL="mongodb://mongodb:27017/users"
-    # MONGO_URL="mongodb://mongodb:172.17.0.2/catalogue" \    
+    REDIS_URL="redis://redis:6379" \
+    MONGO_URL="mongodb://mongodb:27017/users"      
 CMD ["node", "server.js"]
-
-
